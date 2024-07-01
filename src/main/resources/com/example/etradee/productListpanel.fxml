@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: linear-gradient(from 0% 0% to 0% 100%, #FFFFFF 28.97%, #EB6565 100%);" stylesheets="@design/design.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.etradee.productListCrtl">
+   <left>
+      <AnchorPane prefHeight="768.0" prefWidth="100.0" style="-fx-background-color: #EDEDED;" stylesheets="@design/design.css" BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="768.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Button fx:id="product_employee" mnemonicParsing="false" onAction="#product_employee_handle" prefHeight="50.0" prefWidth="100.0" style="-fx-font-weight: 700; -fx-effect: innershadow(three-pass-box, rgba(0, 0, 0, 0.25), 4, 0, 0, -4);; -fx-background-color: #D9D9D9;" styleClass="btnhover" text="Employee List">
+                     <VBox.margin>
+                        <Insets top="100.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="product_productlist" mnemonicParsing="false" onAction="#product_product_handle" prefHeight="50.0" prefWidth="100.0" style="-fx-font-weight: 700; -fx-effect: innershadow(three-pass-box, rgba(0, 0, 0, 0.25), 4, 0, 0, -4);; -fx-background-color: #D9D9D9;" styleClass="btnhover" text="Product list">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="product_sales" mnemonicParsing="false" onAction="#product_sales_handle" prefHeight="50.0" prefWidth="100.0" style="-fx-font-weight: 700; -fx-effect: innershadow(three-pass-box, rgba(0, 0, 0, 0.25), 4, 0, 0, -4);; -fx-background-color: #D9D9D9;" styleClass="btnhover" text="Sales">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="product_logout" mnemonicParsing="false" onAction="#product_logout_handle" prefHeight="50.0" prefWidth="100.0" style="-fx-font-weight: 700; -fx-effect: innershadow(three-pass-box, rgba(0, 0, 0, 0.25), 4, 0, 0, -4); -fx-background-color: #D9D9D9; -fx-text-fill: red;" styleClass="btnhover" text="Lagout" textFill="#eb6565" />
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox layoutX="18.0" layoutY="14.0" spacing="25.0">
+               <children>
+                  <HBox prefHeight="60.0" prefWidth="1230.0" spacing="20.0">
+                     <children>
+                        <TextField fx:id="product_search" onAction="#product_search_handle" prefHeight="60.0" prefWidth="328.0" promptText="Search..." style="-fx-border-color: none; -fx-border-radius: 30px; -fx-background-radius: 30px; -fx-font-size: 20px; -fx-background-color: #EDEDED;">
+                           <padding>
+                              <Insets left="40.0" right="20.0" />
+                           </padding>
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </TextField>
+                        <Button fx:id="product_addBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#product_addproduct_handle" prefHeight="60.0" prefWidth="167.0" style="-fx-font-size: 18px; -fx-font-weight: 700; -fx-background-radius: 30px; -fx-background-color: #EDEDED;" styleClass="addButton" text="Add  Item" />
+                        <AnchorPane prefHeight="60.0" prefWidth="700.0" style="-fx-background-color: #EDEDED; -fx-background-radius: 10px; -fx-border-radius: 10px; -fx-border-color: #ECCECE; -fx-border-width: 5px;">
+                           <children>
+                              <Label layoutY="16.0" nodeOrientation="RIGHT_TO_LEFT" style="-fx-font-size: 20px; -fx-font-weight: 700;" text="Time:">
+                                 <graphic>
+                                    <Label fx:id="product_time" alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="200.0" style="-fx-font-weight: 300;" />
+                                 </graphic>
+                                 <padding>
+                                    <Insets right="32.0" />
+                                 </padding>
+                              </Label>
+                              <Label layoutX="350.0" layoutY="16.0" nodeOrientation="RIGHT_TO_LEFT" style="-fx-font-size: 20px; -fx-font-weight: 700;" text="Date:">
+                                 <graphic>
+                                    <Label fx:id="product_date" alignment="CENTER_RIGHT" prefWidth="200.0" style="-fx-font-weight: 300;" />
+                                 </graphic>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </HBox>
+                  <AnchorPane>
+                     <children>
+                        <TableView fx:id="product_table" editable="true" prefHeight="658.0" prefWidth="1230.0" styleClass="tableViewAdmin" stylesheets="@design/design.css">
+                           <columns>
+                              <TableColumn fx:id="IDitems_Column" prefWidth="123.0" style="-fx-border-color: ECCECE; -fx-font-size: 15px;" text="ID" reorderable="false"/>
+                              <TableColumn fx:id="Nameofitems_Column" minWidth="0.0" prefWidth="450.0" style="-fx-border-color: ECCECE; -fx-font-size: 15px;" text="Name of item" reorderable="false" />
+                              <TableColumn fx:id="Price_Column" minWidth="0.0" prefWidth="150.0" style="-fx-border-color: ECCECE; -fx-font-size: 15px;" text="Price" reorderable="false" />
+                              <TableColumn fx:id="Quantity_Column" minWidth="0.0" prefWidth="150.0" style="-fx-border-color: ECCECE; -fx-font-size: 15px;" text="Quantity" reorderable="false" />
+                              <TableColumn fx:id="Quality_Column" minWidth="0.0" prefWidth="350.0" style="-fx-border-color: ECCECE; -fx-font-size: 15px;" text="Quality" reorderable="false"/>
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

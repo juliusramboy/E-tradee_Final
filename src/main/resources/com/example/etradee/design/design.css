@@ -1,0 +1,167 @@
+/*Login panel*/
+
+#loginbutton{
+    -fx-background-color:white;
+    -fx-font-weight: bold;
+}
+
+#loginbutton:hover{
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0.5, 0, 0); /* Optional for a shadow effect */;
+}
+
+/*Profile_display panel*/
+#inventoryButton:hover{
+    -fx-text-fill:blue;
+    -fx-scale-x: 1.01; /* Scale factor for X-axis */
+    -fx-scale-y: 1.01;
+}
+
+.button1:hover{
+    -fx-text-fill:blue;
+    -fx-scale-x: 1.01; /* Scale factor for X-axis */
+    -fx-scale-y: 1.01;
+}
+
+/*Admin_adduser*/
+.tooltip {
+    -fx-background-color: black; /* Dark background color */
+    -fx-text-fill: white; /* White text color */
+    -fx-font-size: 12px; /* Font size */
+    -fx-font-weight: 700; /* Bold font weight */
+    -fx-border-color: white; /* Border color */
+    -fx-background-radius: 15px; /* Rounded corners for the background */
+    -fx-border-radius: 10px; /* Rounded corners for the border */
+    -fx-effect: none;
+    -fx-opacity:0.5;
+}
+.addButton:hover{
+    -fx-scale-x: 1.03; /* Scale factor for X-axis */
+    -fx-scale-y: 1.03;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0.5, 0, 0); /* Optional for a shadow effect */;
+}
+.tableViewAdmin{
+    -fx-background-color:#EDEDED;
+    -fx-background-radius:5px;
+    -fx-border-color:#ECCECE;
+    -fx-border-width:5px;
+    -fx-border-radius:5px;
+}
+
+/*btnhover all*/
+.btnhover:hover{
+    -fx-cursor: hand;
+    -fx-scale-x: 1.03; /* Scale factor for X-axis */
+    -fx-scale-y: 1.03;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0.5, 0, 0); /* Optional for a shadow effect */;
+}
+.mainpanelhover{
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0.5, 0, 0);
+}
+
+/*Edit panel*/
+.choice-box {
+    -fx-background-color: #ffffff;
+}
+.choice-box .label {
+    -fx-alignment: center; /* Center the text */
+    -fx-text-fill: #000000; /* Text color */
+    -fx-pref-width: 323px; /* Ensure the label width matches the ChoiceBox width */
+}
+
+.choice-box-popup .list-view {
+    -fx-pref-width: 323px; /* Set preferred width for the popup */
+  }
+
+.choice-box-popup .list-view .list-cell {
+    -fx-alignment: center; /* Center the text inside the list cell */
+    -fx-text-fill: #333333; /* Text color */
+}
+/*
+.custom-cursor {
+     -fx-cursor: hand;
+}*/
+
+
+
+.table-view{
+    -fx-background-color: #EDEDED;
+    -fx-background-radius:10px;
+    -fx-border-color:#ECCECE;
+    -fx-border-radius:10px;
+    -fx-border-width:5px;
+    -fx-font-size:15px;
+}
+
+.tableviewleft{
+    -fx-background-color: #EDEDED;
+    -fx-background-radius: 15px 15px 0 0;
+    -fx-border-color: #ECCECE ;
+    -fx-border-radius:10px 10px 0 0;;
+    -fx-border-width:5px;
+    -fx-font-size:15px;
+}
+
+.paneTable{
+    -fx-border-color: #ECCECE;
+    -fx-border-width:5px;
+    -fx-background-radius: 0 0 10px 10px;
+    -fx-border-radius: 0 0 10px 10px;
+}
+
+/*.tableColumn{
+    -fx-background-color: #EDEDED;
+    -fx-border-color:#ECCECE;
+    -fx-border-width:1px;
+}*/
+
+.table-cell{
+    -fx-alignment: CENTER;
+    -fx-border-width:0.5px;
+    -fx-border-color:#ECCECE;
+}
+
+.column-header{
+    -fx-background-color:#D9D9D9;
+}
+
+.fonts{
+    -fx-font-size:20px;
+    -fx-font-weight:700;
+}
+
+/*-fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 5, 0.3, 0, 0); */
+
+.money{
+    -fx-background-color:#EDEDED;
+    -fx-background-radius:15px;
+    -fx-border-color: transparent transparent black transparent;
+    -fx-font-size:20px;
+    -fx-font-weight:700;
+}
+
+.border{
+    -fx-border-color:#ECCECE;
+    -fx-border-width:5px;
+    -fx-background-color:#EDEDED;
+    -fx-border-radius:10px;
+    -fx-background-radius:10px;
+}
+
+.tableReciept{
+    -fx-background-color: transparent;
+    -fx-background-radius:none;
+    -fx-border-color:none;
+    -fx-border-radius:none;
+    -fx-border-width:none;
+    -fx-font-size:none;
+}
+
+.tableReciept .column-header{
+    -fx-background-color:transparent ;
+}
+
+.item-text {
+    -fx-font-size: 20px;
+    -fx-fill: #000000;
+    -fx-font-weight: bold;
+}

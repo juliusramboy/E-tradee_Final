@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: linear-gradient(from 0% 0% to 0% 100%, #FFFFFF 28.97%, #EB6565 100%);" stylesheets="@design/design.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.etradee.admin_addController">
+   <left>
+      <AnchorPane prefHeight="768.0" prefWidth="100.0" style="-fx-background-color: #EDEDED;" BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="768.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Button fx:id="ADMIN_Employeelist" mnemonicParsing="false" onAction="#ADMIN_Employeelist_handle" prefHeight="50.0" prefWidth="100.0" style="-fx-font-weight: 700; -fx-effect: innershadow(three-pass-box, rgba(0, 0, 0, 0.25), 4, 0, 0, -4); -fx-background-color: #D9D9D9;" styleClass="btnhover" text="Employee List">
+                     <VBox.margin>
+                        <Insets top="100.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="ADMIN_Productlist" mnemonicParsing="false" onAction="#ADMIN_Productlist_handle" prefHeight="50.0" prefWidth="100.0" style="-fx-font-weight: 700; -fx-effect: innershadow(three-pass-box, rgba(0, 0, 0, 0.25), 4, 0, 0, -4); -fx-background-color: #D9D9D9;" styleClass="btnhover" text="Product list">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="ADMIN_Sales" mnemonicParsing="false" onAction="#ADMIN_Sales_handle" prefHeight="50.0" prefWidth="100.0" style="-fx-font-weight: 700; -fx-effect: innershadow(three-pass-box, rgba(0, 0, 0, 0.25), 4, 0, 0, -4); -fx-background-color: #D9D9D9;" styleClass="btnhover" text="Sales">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="logoutButtonAdmin" mnemonicParsing="false" onAction="#handleLogoutAdmin" prefHeight="50.0" prefWidth="100.0" style="-fx-font-weight: 700; -fx-effect: innershadow(three-pass-box, rgba(0, 0, 0, 0.25), 4, 0, 0, -4); -fx-background-color: #D9D9D9; -fx-text-fill: red;" styleClass="btnhover" text="Logout" textFill="#eb6565" />
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox layoutX="18.0" layoutY="14.0" spacing="25.0">
+               <children>
+                  <HBox prefHeight="60.0" prefWidth="1230.0" spacing="20.0">
+                     <children>
+                        <TextField fx:id="searchField" prefHeight="60.0" prefWidth="328.0" promptText="Search..." style="-fx-border-color: none; -fx-border-radius: 30px; -fx-background-radius: 30px; -fx-font-size: 20px; -fx-background-color: #EDEDED;">
+                           <padding>
+                              <Insets left="40.0" right="20.0" />
+                           </padding>
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </TextField>
+                        <Button fx:id="addEmployee" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#add_employee" prefHeight="60.0" prefWidth="167.0" style="-fx-font-size: 18px; -fx-font-weight: 700; -fx-background-radius: 30px; -fx-background-color: #EDEDED;" styleClass="addButton" text="Add  Employee">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Button>
+                        <AnchorPane prefHeight="60.0" prefWidth="700.0" style="-fx-background-color: #EDEDED; -fx-background-radius: 10px; -fx-border-radius: 10px; -fx-border-color: #ECCECE; -fx-border-width: 5px;">
+                           <children>
+                              <Label layoutY="16.0" nodeOrientation="RIGHT_TO_LEFT" style="-fx-font-size: 20px; -fx-font-weight: 700;" text="Time:">
+                                 <graphic>
+                                    <Label fx:id="currentTimeLabel" alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="200.0" style="-fx-font-weight: 300;" />
+                                 </graphic>
+                                 <padding>
+                                    <Insets right="32.0" />
+                                 </padding>
+                              </Label>
+                              <Label layoutX="350.0" layoutY="16.0" nodeOrientation="RIGHT_TO_LEFT" style="-fx-font-size: 20px; -fx-font-weight: 700;" text="Date:">
+                                 <graphic>
+                                    <Label fx:id="currentDateLabel" alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="200.0" style="-fx-font-weight: 300;" />
+                                 </graphic>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </HBox>
+                  <AnchorPane>
+                     <children>
+                        <TableView fx:id="usersTableView" prefHeight="658.0" prefWidth="1230.0" styleClass="tableViewAdmin" stylesheets="@design/design.css">
+                           <columns>
+                              <TableColumn fx:id="ID_Column" prefWidth="105.0" reorderable="false" resizable="false" style="-fx-border-color: ECCECE;" styleClass="tableColumn" text="ID" />
+                              <TableColumn fx:id="Name_Column" minWidth="0.0" prefWidth="300.0" reorderable="false" resizable="false" style="-fx-border-color: ECCECE;" styleClass="tableColumn" text="Name of Employee" />
+                              <TableColumn fx:id="Contact_Column" minWidth="0.0" prefWidth="225.0" reorderable="false" resizable="false" style="-fx-border-color: ECCECE;" styleClass="tableColumn" text="Contact number" />
+                              <TableColumn fx:id="Address_Column" minWidth="0.0" prefWidth="368.0" reorderable="false" resizable="false" style="-fx-border-color: ECCECE;" styleClass="tableColumn" text="Address" />
+                              <TableColumn fx:id="Password_Column" minWidth="0.0" prefWidth="225.0" reorderable="false" resizable="false" style="-fx-border-color: ECCECE;" styleClass="tableColumn" text="Password" />
+                           </columns>
+                           <tooltip>
+                              <Tooltip contentDisplay="TEXT_ONLY" text="Double click to view" />
+                           </tooltip>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

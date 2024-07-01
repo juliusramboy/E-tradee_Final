@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="768.0" prefWidth="1366.0" stylesheets="@design/design.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.etradee.CashierController">
+   <children>
+      <AnchorPane layoutX="-3.0" prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: linear-gradient(from 0% 0% to 0% 100%, #FFFFFF 28.97%, #EB6565 100%);" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox layoutX="32.0" layoutY="93.0">
+               <children>
+                  <TableView fx:id="cashier_tableLeftt" prefHeight="482.5" prefWidth="418.0" style="-fx-background-color: #EDEDED;" styleClass="tableviewleft">
+                     <columns>
+                        <TableColumn minWidth="139.3" prefWidth="75.0" reorderable="false" resizable="false" text="Product" />
+                        <TableColumn minWidth="139.3" prefWidth="75.0" reorderable="false" resizable="false" text="Price" />
+                        <TableColumn minWidth="139.3" prefWidth="75.0" reorderable="false" resizable="false" text="Quantity" />
+                        <TableColumn minWidth="139.3" prefWidth="75.0" reorderable="false" resizable="false" text="Quality" />
+                     </columns></TableView>
+                  <Pane prefHeight="161.0" prefWidth="550.0" style="-fx-background-color: #EDEDED;" styleClass="paneTable">
+                     <children>
+                        <VBox alignment="CENTER_LEFT" layoutX="20.0" layoutY="27.0" prefHeight="108.0" prefWidth="510.0">
+                           <children>
+                              <Label alignment="CENTER" nodeOrientation="RIGHT_TO_LEFT" style="-fx-font-size: 25px; -fx-font-weight: 700;" text="Total fee:">
+                                 <graphic>
+                                    <Label fx:id="cashier_totalFee" text="Label" />
+                                 </graphic>
+                              </Label>
+                              <Label nodeOrientation="RIGHT_TO_LEFT" style="-fx-font-size: 25px; -fx-font-weight: 700;" text="Money:">
+                                 <graphic>
+                                    <TextField fx:id="cashier_money" nodeOrientation="LEFT_TO_RIGHT" prefHeight="30.0" styleClass="money" />
+                                 </graphic>
+                              </Label>
+                              <Label alignment="CENTER" nodeOrientation="RIGHT_TO_LEFT" style="-fx-font-size: 25px; -fx-font-weight: 700;" text="Change:">
+                                 <graphic>
+                                    <Label fx:id="cashier_change" text="Label" />
+                                 </graphic>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </children>
+                  </Pane>
+               </children>
+            </VBox>
+            <Pane layoutX="600.0" layoutY="21.0" prefHeight="121.0" prefWidth="740.0" style="-fx-background-color: #EDEDED; -fx-background-radius: 10px; -fx-border-color: #ECCECE; -fx-border-width: 5px; -fx-border-radius: 10px;" AnchorPane.leftAnchor="600.0" AnchorPane.topAnchor="21.0">
+               <children>
+                  <Label alignment="CENTER" layoutX="56.0" layoutY="25.0" nodeOrientation="RIGHT_TO_LEFT" style="-fx-font-size: 25px; -fx-font-weight: 700;" text="Name:">
+                     <graphic>
+                        <Label fx:id="cashier_name" text="Label" />
+                     </graphic>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="57.0" layoutY="61.0" nodeOrientation="RIGHT_TO_LEFT" style="-fx-font-size: 25px; -fx-font-weight: 700;" text="Position:">
+                     <graphic>
+                        <Label fx:id="cashier_position" text="Label" />
+                     </graphic>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="372.0" layoutY="25.0" nodeOrientation="RIGHT_TO_LEFT" style="-fx-font-size: 25px; -fx-font-weight: 700;" text="Time:">
+                     <graphic>
+                        <Label fx:id="cashier_time" text="Label" />
+                     </graphic>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="374.0" layoutY="61.0" nodeOrientation="RIGHT_TO_LEFT" style="-fx-font-size: 25px; -fx-font-weight: 700;" text="Date:">
+                     <graphic>
+                        <Label fx:id="cashier_date" text="Label" />
+                     </graphic>
+                  </Label>
+               </children>
+            </Pane>
+            <TableView fx:id="cashier_tableRight" layoutX="600.0" layoutY="149.0" prefHeight="506.0" prefWidth="740.0" styleClass="tableview">
+               <columns>
+                  <TableColumn prefWidth="366.0" reorderable="false" resizable="false" text="Product name" />
+                  <TableColumn prefWidth="364.0" reorderable="false" resizable="false" text="Quantity" />
+               </columns>
+            </TableView>
+            <Button fx:id="cashier_confirmBtn" layoutX="600.0" layoutY="662.0" mnemonicParsing="false" onAction="#cashier_confirm_handle" prefHeight="75.0" prefWidth="360.0" style="-fx-background-color: #EDEDED; -fx-font-size: 30px; -fx-font-weight: 700; -fx-background-radius: 30px;" styleClass="btnhover" text="Confirm" />
+            <Button fx:id="cashier_deleteBtn" layoutX="980.0" layoutY="662.0" mnemonicParsing="false" onAction="#cashier_delete_handle" prefHeight="75.0" prefWidth="360.0" style="-fx-background-color: #EDEDED; -fx-font-size: 30px; -fx-font-weight: 700; -fx-background-radius: 30px;" styleClass="btnhover" text="Delete" />
+            <TextField fx:id="cashier_search" layoutX="124.0" layoutY="21.0" prefHeight="60.0" prefWidth="458.0" promptText="Search..." style="-fx-border-color: none; -fx-border-radius: 30px; -fx-background-radius: 30px; -fx-font-size: 20px; -fx-background-color: #EDEDED;">
+               <padding>
+                  <Insets left="40.0" right="20.0" />
+               </padding>
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </TextField>
+            <Button fx:id="cashier_backBtn" layoutX="32.0" layoutY="22.0" mnemonicParsing="false" onAction="#cashier_backBtn_handle" prefHeight="60.0" prefWidth="75.0" style="-fx-background-color: #EDEDED; -fx-font-size: 20px; -fx-font-weight: 700; -fx-background-radius: 20px;" styleClass="btnhover" text="Back" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
