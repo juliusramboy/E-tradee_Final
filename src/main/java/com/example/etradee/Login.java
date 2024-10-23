@@ -19,12 +19,12 @@ public class Login {
     private TextField usernametext;
     @FXML
     private PasswordField passwordtext;
-
+    
     private Connection connection;
 
     public void initialize() {
 
-        // Initialize the database connection
+        // database connection 
         try {
             connection = DatabaseCon.getConnection();
         } catch (SQLException e) {
