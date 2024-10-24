@@ -19,7 +19,7 @@ public class Product {
         this.quality = quality;
     }
 
-    // Getters and setters (generated or manually implemented)
+    // Getters and setters (auto generated ni intellij wohooo!!)
     public int getId() {
         return id;
     }
